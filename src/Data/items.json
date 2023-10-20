@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Book",
+    "price": 10.99,
+    "imgUrl": "/imgs/book.jpg",
+    "inStock": true,
+    "rating": 5,
+    "FastDelivery": true
+  },
+  {
+    "id": 2,
+    "name": "Computer",
+    "price": 1199,
+    "imgUrl": "/imgs/computer.jpg",
+    "inStock": true,
+    "rating": 4,
+    "FastDelivery": true
+  },
+  {
+    "id": 3,
+    "name": "Banana",
+    "price": 1.05,
+    "imgUrl": "/imgs/banana.jpg",
+    "inStock": false,
+    "rating": 3,
+    "FastDelivery": false
+  },
+  {
+    "id": 4,
+    "name": "Car",
+    "price": 14000,
+    "imgUrl": "/imgs/car.jpg",
+    "inStock": false,
+    "rating": 2,
+    "FastDelivery": true
+  },
+  {
+    "id": 1,
+    "name": "Book",
+    "price": 10.99,
+    "imgUrl": "/imgs/book.jpg",
+    "inStock": true,
+    "rating": 5,
+    "FastDelivery": true
+  },
+  {
+    "id": 2,
+    "name": "Computer",
+    "price": 1199,
+    "imgUrl": "/imgs/computer.jpg",
+    "inStock": true,
+    "rating": 4,
+    "FastDelivery": true
+  },
+  {
+    "id": 3,
+    "name": "Banana",
+    "price": 1.05,
+    "imgUrl": "/imgs/banana.jpg",
+    "inStock": false,
+    "rating": 3,
+    "FastDelivery": false
+  },
+  {
+    "id": 4,
+    "name": "Car",
+    "price": 14000,
+    "imgUrl": "/imgs/car.jpg",
+    "inStock": false,
+    "rating": 2,
+    "FastDelivery": true
+  }
+]
