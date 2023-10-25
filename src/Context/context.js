@@ -4,8 +4,44 @@ import storeitems from "../Data/items.json";
 
 const cart = createContext();
 
-function cartRedcuer(state, action) {
+function cartReducer(state, action) {
   switch (action.type) {
+    case "ADD_ITEM":
+      return { ...state, cart: [...state.cart, { ...action.payload, qty: 1 }] };
+    case "REMOVE_ITEM":
+      return {
+        ...state,
+        cart: state.cart.filter((item) => item.id !== action.payload.id),
+      };
+    case "CHANGE_CART_QUANTITY":
+      return {};
+    default:
+      return state;
+  }
+}
+
+function productReducer(state, action) {
+  switch (action.type) {
+    case "SORT_BY_PRICE":
+      return { ...state, sort: action.payload };
+
+    case "FILTER_BY_STOCK":
+      return { ...state, byStock: !state.byStock };
+
+    case "FILTER_BY_FASTDELIVERY":
+      return { ...state, byFastDelivery: !state.byFastDelivery };
+
+    case "FILTER_BY_RATING":
+      return { ...state, byRating: action.payload };
+    case "FILTER_BY_SEARCH":
+      return { ...state, searchQuery: action.payload };
+
+    case "CLEAR_FITLERS":
+      return {
+        byStock: false,
+        byFastDelivery: false,
+        byRating: 0,
+      };
     default:
       return state;
   }
@@ -22,11 +58,25 @@ const Context = ({ children }) => {
   //   ratings: faker.random.arrayElement([0, 1, 2, 3, 4, 5]),
   // }));
 
-  const [state, dispatch] = useReducer(cartRedcuer, {
+  const [state, dispatch] = useReducer(cartReducer, {
     products: storeitems,
     cart: [],
   });
-  return <cart.Provider value={{ state, dispatch }}>{children}</cart.Provider>;
+
+  const [productState, dispatchProductState] = useReducer(productReducer, {
+    byStock: false,
+    byFastDelivery: false,
+    byRating: 0,
+    searchQuery: "",
+  });
+
+  return (
+    <cart.Provider
+      value={{ state, dispatch, productState, dispatchProductState }}
+    >
+      {children}
+    </cart.Provider>
+  );
 };
 
 export default Context;

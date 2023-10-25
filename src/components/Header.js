@@ -1,8 +1,15 @@
 import React from "react";
 import { Container, Navbar, Form, Nav, Dropdown, Badge } from "react-bootstrap";
 import { FaShoppingCart } from "react-icons/fa";
+import { Cartstate } from "../Context/context";
 
 const Header = () => {
+  const {
+    state: { cart },
+    dispatchProductState,
+  } = Cartstate();
+
+  console.log(cart);
   return (
     <div>
       <Navbar bg="dark" data-bs-theme="dark">
@@ -14,6 +21,12 @@ const Header = () => {
                 style={{ width: 500 }}
                 placeholder="Search a Product"
                 className="m-auto"
+                onChange={(e) => {
+                  dispatchProductState({
+                    type: "FILTER_BY_SEARCH",
+                    payload: e.target.value,
+                  });
+                }}
               />
             </Navbar.Text>
           </Navbar>
@@ -21,7 +34,7 @@ const Header = () => {
             <Dropdown>
               <Dropdown.Toggle variant="success" id="dropdown-basic">
                 <FaShoppingCart color="white" fontSize="25px" />
-                <Badge bg="transparent">{10}</Badge>
+                <Badge bg="transparent">{cart.length}</Badge>
               </Dropdown.Toggle>
               <Dropdown.Menu
                 style={{

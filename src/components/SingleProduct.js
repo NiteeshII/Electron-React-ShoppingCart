@@ -5,10 +5,11 @@ import classes from "./Home.module.css";
 import Rating from "./Rating";
 
 const SingleProduct = ({ item }) => {
-  const { state: products, cart } = Cartstate();
-  console.log(products, cart);
+  const {
+    state: { cart },
+    dispatch,
+  } = Cartstate();
 
-  console.log(item);
   return (
     <div className={classes.products}>
       <Card style={{ width: "18rem", textAlign: "left" }}>
@@ -27,9 +28,27 @@ const SingleProduct = ({ item }) => {
             <Rating rating={item.rating} />
           </div>
           {cart?.some((each) => each.id === item.id) ? (
-            <Button variant="danger">Remove Button</Button>
+            <Button
+              variant="danger"
+              onClick={() =>
+                dispatch({
+                  type: "REMOVE_ITEM",
+                  payload: item,
+                })
+              }
+            >
+              Remove Button
+            </Button>
           ) : (
-            <Button disabled={!item.inStock}>
+            <Button
+              disabled={!item.inStock}
+              onClick={() =>
+                dispatch({
+                  type: "ADD_ITEM",
+                  payload: item,
+                })
+              }
+            >
               {item.inStock ? "Add to Cart" : "out of Stock"}
             </Button>
           )}

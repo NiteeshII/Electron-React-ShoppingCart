@@ -2,11 +2,15 @@ import React from "react";
 import { AiOutlineStar } from "react-icons/ai";
 import { AiFillStar } from "react-icons/ai";
 
-const Rating = ({ rating }) => {
+const Rating = ({ rating, onClick }) => {
   return (
     <>
       {[...Array(5)].map((_, i) => {
-        return rating > i ? <AiFillStar /> : <AiOutlineStar />;
+        return (
+          <span key={i} onClick={() => onClick(i)}>
+            {rating > i ? <AiFillStar /> : <AiOutlineStar />}
+          </span>
+        );
       })}
     </>
   );

@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Book",
     "price": 10.99,
-    "imgUrl": "/imgs/book.jpg",
+    "imgUrl": "/public/book-4986.png",
     "inStock": true,
     "rating": 5,
     "FastDelivery": true
@@ -36,7 +36,7 @@
     "FastDelivery": true
   },
   {
-    "id": 1,
+    "id": 5,
     "name": "Book",
     "price": 10.99,
     "imgUrl": "/imgs/book.jpg",
@@ -45,7 +45,7 @@
     "FastDelivery": true
   },
   {
-    "id": 2,
+    "id": 6,
     "name": "Computer",
     "price": 1199,
     "imgUrl": "/imgs/computer.jpg",
@@ -54,7 +54,7 @@
     "FastDelivery": true
   },
   {
-    "id": 3,
+    "id": 7,
     "name": "Banana",
     "price": 1.05,
     "imgUrl": "/imgs/banana.jpg",
@@ -63,7 +63,7 @@
     "FastDelivery": false
   },
   {
-    "id": 4,
+    "id": 8,
     "name": "Car",
     "price": 14000,
     "imgUrl": "/imgs/car.jpg",
