@@ -14,7 +14,14 @@ function cartReducer(state, action) {
         cart: state.cart.filter((item) => item.id !== action.payload.id),
       };
     case "CHANGE_CART_QUANTITY":
-      return {};
+      return {
+        ...state,
+        cart: state.cart.filter((item) => {
+          return item.id === action.payload.item
+            ? (item.qty = action.payload.qty)
+            : item.qty;
+        }),
+      };
     default:
       return state;
   }
