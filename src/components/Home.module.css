@@ -1,0 +1,72 @@
+.Home {
+  display: flex;
+}
+
+.filter-container {
+  width: 22%;
+  background-color: #212529;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+}
+
+.homepage-container {
+  width: 78%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin: 1rem;
+  padding: 0 2rem;
+}
+
+.products {
+  width: 30%;
+  margin: 10px;
+}
+
+.homepage-container > span {
+  width: 30%;
+}
+
+.cartitem {
+  display: flex;
+  justify-content: space-around;
+}
+
+.ButtonContainer {
+  text-align: center;
+  margin-top: 1rem;
+}
+.cartButton {
+  width: 90%;
+}
+
+.Cart-Home {
+  display: flex;
+}
+
+.CartItem-Container {
+  width: 70%;
+  margin: 2rem;
+}
+
+.SubTotal-Container {
+  margin: 0.5rem 1rem;
+  color: white;
+  background-color: #212529;
+  height: 86vh;
+  width: 28%;
+  display: flex;
+  flex-direction: column;
+}
+
+.SubTotal-Container > button {
+  margin: 0.5rem;
+}
+
+.SubTotal-Container > span {
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 1rem 0.2rem;
+}

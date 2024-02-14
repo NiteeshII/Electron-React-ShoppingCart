@@ -1,0 +1,14 @@
+.Filters {
+  display: flex;
+  flex-direction: column;
+  height: 86vh;
+}
+.Filters > span {
+  padding: 10px;
+  display: inline-block;
+  text-align: left;
+}
+
+.Filter-Button {
+  margin: 30px 10px;
+}

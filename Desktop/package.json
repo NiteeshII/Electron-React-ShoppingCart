@@ -1,0 +1,22 @@
+{
+  "name": "foodapp--react-electron",
+  "version": "0.0.1",
+  "description": "this is a dummy app",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "start:dev": "npx electronmon --trace-warnings ."
+  },
+  "keywords": [
+    "electron",
+    "react",
+    "JS",
+    "typescript"
+  ],
+  "author": "Niteesh",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^28.2.2"
+  }
+}
